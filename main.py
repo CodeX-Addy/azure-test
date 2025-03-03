@@ -1,18 +1,19 @@
+import os
 import sys
 from crewai import Agent, Task
-import os
 from dotenv import load_dotenv
 from crewai import Crew, Process, LLM
 from langchain_openai import AzureChatOpenAI
 
 load_dotenv()
 
+## Azure LLM Declaration (GPT-4o)
 azure_llm = LLM(
     api_version=os.environ.get("OPENAI_API_VERSION"),
     model="azure/gpt-4o",
 )
 
-# Create a researcher agent
+## Research Agent
 researcher = Agent(
   role='Senior Researcher',
   goal='Discover groundbreaking technologies',
@@ -21,15 +22,14 @@ researcher = Agent(
   backstory='A curious mind fascinated by cutting-edge innovation and the potential to change the world, you know everything about tech.'
 )
 
-# Task for the researcher
+## Tak for the researcher
 research_task = Task(
   description='Identify the next big trend in AI',
   expected_output='5 paragraphs on the next big AI trend',
-  agent=researcher  # Assigning the task to the researcher
+  agent=researcher  
 )
 
-
-# Instantiate your crew
+## Crew 
 tech_crew = Crew(
   agents=[researcher],
   tasks=[research_task],
