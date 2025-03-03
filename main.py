@@ -33,8 +33,8 @@ research_task = Task(
 tech_crew = Crew(
   agents=[researcher],
   tasks=[research_task],
-  process=Process.sequential  # Tasks will be executed one after the other
+  process=Process.sequential  
 )
 
-# Begin the task execution
+## Begin the crew execution
 tech_crew.kickoff()
