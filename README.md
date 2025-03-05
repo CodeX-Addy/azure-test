@@ -1,3 +1,3 @@
 # azure-test
 
-### For Crew having version >= 0.80
+### For CrewAI having version >= 0.80
