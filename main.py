@@ -22,7 +22,7 @@ researcher = Agent(
   backstory='A curious mind fascinated by cutting-edge innovation and the potential to change the world, you know everything about tech.'
 )
 
-## Tak for the researcher
+## Task for the researcher
 research_task = Task(
   description='Identify the next big trend in AI',
   expected_output='5 paragraphs on the next big AI trend',
