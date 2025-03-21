@@ -36,5 +36,5 @@ tech_crew = Crew(
   process=Process.sequential  
 )
 
-## Begin the crew execution
+## Crew execution
 tech_crew.kickoff()
